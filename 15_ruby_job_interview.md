@@ -169,13 +169,13 @@ a ||= b #=> a = 1
 ```ruby
 a = nil
 b = 2
-a ||= b #=> a = 2
+a ||= b #=> b = 2
 ```
 
 ```ruby
 a = false
 b = 2
-a ||= b #=> a = 2
+a ||= b #=> b = 2
 ```
 
 #### What does self mean?
