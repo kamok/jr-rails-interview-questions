@@ -4,22 +4,13 @@
 # Without .min, .max, or .sort
 # { min: -1, max:12}
 
-	def calc_max_min(array)
-		min, max = array[0], array[0]
-			array.map do |value|
-				if value <= min 
-					min = value
-				elsif value >= max
-					max = value
-				end
-			end
-		a = {}
-		a[:min] = min
-		a[:max] = max
-		a
-	end
+def calc_max_min(array)
+	min, max = array[0], array[0]
+	array.each { |value| value <= min ? min = value : max = value }
+  {}.tap { |output| output[:min], output[:max] = min, max }
+end
 
-	p calc_max_min([ 1, 0, 5, 2, 10, 8, 12, -1 ])
+p calc_max_min([ 1, 0, 5, 2, 10, 8, 12, -1, -99, 516])
 
 # Imagine our "%" is broken. Write a function that returns the remainder of division of the dividend by the divisor:
 # remainder( 10, 3 ) = 1
