@@ -17,4 +17,4 @@ def can_build_sum?(array, target_sum)
 	return false
 end
 
-p can_build_sum?(a, 19)
+p can_build_sum?(a, 55)
