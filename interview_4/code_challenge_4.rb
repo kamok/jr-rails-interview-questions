@@ -4,7 +4,7 @@
 # Given that A = 1, B = 2, C = 3...case not sensitive
 # Write a function that you input a word (string), and you get a word score
 # Two more rules:
-# If repeating, exponetation why the number of times a letter appears
+# If repeating, exponetation the number of times a letter appears
 # Eg. BAFFLE, First F counts as 6. Second F counts as 6**2 (36)
 # Also factor in the index of the letter by multipying the index, counting from 1
 # Eg. the word ABA will yield = 1*1 + 2*2 + 1**2*3 
@@ -17,24 +17,25 @@ def word_score(word)
 	words_already_checked = {}
 	word_array = word.split(“”)
 
-word_array.map! do |letter|
-	words_already_checked[letter] = 0
+	word_array.map! do |letter|
+		words_already_checked[letter] = 0
 
-	if words_already_checked[letter] > 0
+		if words_already_checked[letter] > 0
 			letter = DICTIONARY[letter] ** (words_already_checked[letter] + 1)
 		else
 			letter = DICTIONARY[letter]
 		end
-words_already_checked[letter] += 1 
+			words_already_checked[letter] += 1 
 	end
 
-final_word = []
-I.each_with_index |letter, index|
-	index = index + 1
-	final_word << letter * index 
-end 
-##[2,6,65,1656]  add up all the numbers in the array to get the sum
-final_word.inject(&:+)
+	final_word = []
+
+	word_array.each_with_index |letter, index|
+		index = index + 1
+		final_word << letter * index 
+	end 
+	##[2,6,65,1656]  add up all the numbers in the array to get the sum
+	final_word.inject(&:+)
 end
 
 
@@ -54,6 +55,8 @@ end
 # Singles = { “one” => 3, “two” => 3 }
 
 # Suffix =  { “hundred” => 7, “thousand” => 8}
+
+
 
 ## Q3: Poker 
 

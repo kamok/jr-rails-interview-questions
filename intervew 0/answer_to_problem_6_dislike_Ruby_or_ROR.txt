@@ -1,0 +1,5 @@
+What do you dislike the most about Ruby/RoR?
+
+I love everything about Ruby. I think true to its mission, Ruby makes me happy. For me the perfect computer language is one that can be understood easily at a glance, even by a layperson. When I compare JavaScript to Ruby, JavaScript seems unnecessarily superfluous. 
+
+Regarding Rails, as many like to talk about its lack of scaling, coupling of ActiveRecord to class objects, and even snobby community, the biggest concern I have is the amount of time it takes to run tests. There are preloaders but none that works well for Windows. (I've tried them all and asked on stackoverflow)
